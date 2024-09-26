@@ -84,9 +84,10 @@ DATABASES = {
     },
     #"default":{ dj_database_url.parse("postgresql://postgres01:QZ4OaxJslnIYUYq0BALxTewiKw1zTag5@dpg-crpm5bjv2p9s7387u5sg-a.oregon-postgres.render.com/onlyflans_s68m")}
 }
-DATABASES={"default" : dj_database_url.parse(
-   "postgres://postgres01:onlyflans_s68m@dpg-crpm5bjv2p9s7387u5sg-aoregon-postgres.render.com:5432/onlyflans_s68m")
-}
+DATABASES["default"]= dj_database_url.parse(config("DATABASE_URL"))
+#DATABASES={"default" : dj_database_url.parse(
+#   "postgres://postgres01:onlyflans_s68m@dpg-crpm5bjv2p9s7387u5sg-aoregon-postgres.render.com:5432/onlyflans_s68m")
+#}
 
 #DATABASES["default"]= dj_database_url.parse(config("DATABASE_URL"))
 
