@@ -76,15 +76,18 @@ WSGI_APPLICATION = 'proyect001.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+#DATABASES = {
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': BASE_DIR / 'db.sqlite3',
+    #},
+    #"default":{ dj_database_url.parse("postgresql://postgres01:QZ4OaxJslnIYUYq0BALxTewiKw1zTag5@dpg-crpm5bjv2p9s7387u5sg-a.oregon-postgres.render.com/onlyflans_s68m")}
+#}
+DATABASES={"default" : dj_database_url.parse(
+    "postgres://postgres01:onlyflans_s68m@dpg-crpm5bjv2p9s7387u5sg-a.render.com:5432/onlyflans_s68m")
 }
 
-
-DATABASES["default"]= dj_database_url.parse(config("DATABASE_URL"))
+#DATABASES["default"]= dj_database_url.parse(config("DATABASE_URL"))
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
